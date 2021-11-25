@@ -4,14 +4,9 @@ metadata:
   name: pod-2
   labels:
     app: segundo-pod
-    alura: cursos
 spec:
   containers:
     - name: container-pod-2
       image: nginx:latest
-      resources:
-        limits:
-          memory: "512Mi"
-          cpu: "750m"
       ports:
         - containerPort: 80
