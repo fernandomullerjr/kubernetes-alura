@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sistema-noticias-service-loadbalancer
+spec:
+  type: LoadBalancer
+  selector:
+    app: sistema-noticias
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
