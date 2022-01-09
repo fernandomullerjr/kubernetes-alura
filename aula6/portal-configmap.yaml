@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: portal-configmap
 data:
-  IP_SISTEMA: http://a09f33bda634143009932b7ec01a0e25-639824310.us-east-1.elb.amazonaws.com/
+  IP_SISTEMA: http://a553c79ae5aa349c98bdfbc32087246a-1349935320.us-east-1.elb.amazonaws.com/
