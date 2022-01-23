@@ -24,7 +24,6 @@ spec:
                     - >
                         chown -R www-data /tmp &&
                         chgrp -R www-data /var/www/html/uploads &&
-                        chmod -R 777 /var/www/html/uploads &&
                         find /var/www/html/uploads -type d -exec chmod g+s {} +
           envFrom:
             - configMapRef:
