@@ -15,6 +15,17 @@ spec:
           image: aluracursos/sistema-noticias:1
           ports:
             - containerPort: 80
+          lifecycle:
+            postStart:
+              exec:
+                command:
+                    - /bin/bash
+                    - -c
+                    - >
+                        chown -R www-data /tmp &&
+                        chgrp -R www-data /var/www/html/uploads &&
+                        chmod -R 777 /var/www/html/uploads &&
+                        find /var/www/html/uploads -type d -exec chmod g+s {} +
           envFrom:
             - configMapRef:
                 name: sistema-configmap
